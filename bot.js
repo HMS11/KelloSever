@@ -4,7 +4,7 @@ const prefix = '.'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
+client.user.setGame(`.Booّdy ♚`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -112,7 +112,6 @@ client.on('message', message => {
       ) 
     }
 }
-  
 });
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
