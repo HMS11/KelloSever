@@ -28,7 +28,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
 });
 client.on('message', message => {
-  if (message.content.startsWith ("+invites")) {
+  if (message.content.startsWith ("Kinvites")) {
    if(!message.channel.guild) return message.reply('** This command only for servers **');
        var mentionned = message.mentions.users.first();
       var os;
@@ -66,7 +66,7 @@ var prefix = "f!";
     let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
     if (!args[1]) {
-message.channel.send("**f!bc <message>**");
+message.channel.send("**K!bc <message>**");
 return;
 }
         message.guild.members.forEach(m => {
