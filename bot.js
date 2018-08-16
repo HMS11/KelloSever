@@ -112,6 +112,7 @@ client.on('message', message => {
       ) 
     }
 }
+  
 });
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
