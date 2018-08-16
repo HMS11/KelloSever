@@ -84,4 +84,33 @@ return;
         return;
     }
 });
+
+const Discord = require("discord.js");
+const client = new Discord.Client();
+client.on('ready', () => {
+  client.user.setGame('codes_support',`https://www.twitch.tv/`);
+  console.log('codes_support');
+});
+client.on('message', message => {
+ if (message.content.includes('disc ord.gg')){      //شيل المسافه
+                     if(!message.channel.guild) return message.reply ('')
+                 if (!message.member.hasPermissions(['MANAGE_MESSAGES'])){
+    message.delete() 
+     var member = message.member
+    
+ 
+       
+          member.ban().then((member) => {
+              message.channel.send("", {embed: {
+              author: {
+              },
+              title: 'بسبب النشر ' + member.displayName + ' تم طرد',
+              color: 490101,
+              }
+            });
+        }
+      ) 
+    }
+}
+});
 client.login(process.env.BOT_TOKEN);
