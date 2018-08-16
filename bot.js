@@ -112,18 +112,4 @@ client.on('message', message => {
       ) 
     }
 }
-});
-client.on('message', function(message) {
-    if (message.channel.type === "dm") {
-        if (message.author.id === client.user.id) return;
-        var norElden = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setTimestamp()
-            .setTitle('``رساله جديده في خاص البوت``')
-            .setThumbnail(`${message.author.avatarURL}`)
-            .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
-            .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
-        client.channels.get("ايدي الروم اللي بيرسل بيها اللي يجيه خاص").send({ embed: norElden });
-    }
-});
 client.login(process.env.BOT_TOKEN);
