@@ -58,7 +58,7 @@ message.channel.send(`**__${invites.find(invite => invite.inviter.id === `${os}`
 
 });
 client.on('message', message => {
-var prefix = "f!";
+var prefix = "K!";
 
     if (message.author.id === client.user.id) return;
     if (message.guild) {
